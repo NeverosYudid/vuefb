@@ -5,9 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "serve:ssl":"vue-cli-serve --https --open --public localhost:8080",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.25.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
@@ -40,7 +42,10 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {},
+    "globals":{
+      "FB": "readonly"
+    }
   },
   "browserslist": [
     "> 1%",
